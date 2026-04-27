@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var BottoneRegistro: Button
     lateinit var BottoneLibri: Button
     lateinit var BottoneCircolari: Button
+    lateinit var url: String        // URL a cui puntano bottoni
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,12 +36,31 @@ class MainActivity : AppCompatActivity() {
 
 
         BottoneOrario.setOnClickListener { v ->
-            val url = "https://www.istitutoturoldo.edu.it/didattica/calendario-scolastico/orario-scolastico/"
+            url = "https://www.istitutoturoldo.edu.it/didattica/calendario-scolastico/orario-scolastico/"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
         }
 
+        BottonePTOF.setOnClickListener { v ->
+            url = "https://www.istitutoturoldo.edu.it/documento/regolamento-istituto/"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        }
 
+        BottoneRegistro.setOnClickListener { v ->
+            url =  "https://www.istitutoturoldo.edu.it/servizio/registro-elettronico-docenti/"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        }
+
+        BottoneLibri.setOnClickListener { v ->
+            url =  "https://www.istitutoturoldo.edu.it/didattica/adozioni-libri-di-testo/"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        }
     }
 }
