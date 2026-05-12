@@ -11,11 +11,11 @@ import android.net.Uri
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var BottoneOrario: Button
-    lateinit var BottonePTOF: Button
-    lateinit var BottoneRegistro: Button
-    lateinit var BottoneLibri: Button
-    lateinit var BottoneCircolari: Button
+    lateinit var bottoneOrario: Button
+    lateinit var bottonePTOF: Button
+    lateinit var bottoneRegistro: Button
+    lateinit var bottoneLibri: Button
+    lateinit var bottoneCircolari: Button
     lateinit var url: String        // URL a cui puntano bottoni
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,35 +28,35 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        BottoneOrario = findViewById<Button>(R.id.Orario)
-        BottonePTOF = findViewById<Button>(R.id.PTOF)
-        BottoneRegistro = findViewById<Button>(R.id.Registro)
-        BottoneLibri = findViewById<Button>(R.id.Libri)
+        bottoneOrario = findViewById<Button>(R.id.orario)
+        bottonePTOF = findViewById<Button>(R.id.ptof)
+        bottoneRegistro = findViewById<Button>(R.id.registro)
+        bottoneLibri = findViewById<Button>(R.id.libri)
 
 
 
-        BottoneOrario.setOnClickListener { v ->
+        bottoneOrario.setOnClickListener { v ->
             url = "https://www.istitutoturoldo.edu.it/didattica/calendario-scolastico/orario-scolastico/"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
         }
 
-        BottonePTOF.setOnClickListener { v ->
+        bottonePTOF.setOnClickListener { v ->
             url = "https://www.istitutoturoldo.edu.it/documento/regolamento-istituto/"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
         }
 
-        BottoneRegistro.setOnClickListener { v ->
+        bottoneRegistro.setOnClickListener { v ->
             url =  "https://www.istitutoturoldo.edu.it/servizio/registro-elettronico-docenti/"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
         }
 
-        BottoneLibri.setOnClickListener { v ->
+        bottoneLibri.setOnClickListener { v ->
             url =  "https://www.istitutoturoldo.edu.it/didattica/adozioni-libri-di-testo/"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)

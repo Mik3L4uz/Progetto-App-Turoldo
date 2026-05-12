@@ -11,67 +11,84 @@
         android:id="@+id/Titolo"
         android:layout_width="246dp"
         android:layout_height="74dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="App del Turoldo"
+        android:text="App Turoldo"
         android:textSize="12pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <ImageView
-        android:id="@+id/Logo"
+        android:id="@+id/logo"
         android:layout_width="65dp"
         android:layout_height="74dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/Titolo"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
         app:srcCompat="@drawable/stemma" />
 
+
     <Button
-        android:id="@+id/Orario"
+        android:id="@+id/orario"
         android:layout_width="130dp"
         android:layout_height="86dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="50dp"
+        android:backgroundTint="#000CD3"
         android:text="Orario Classi"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/Registro"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ptof"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
 
     <Button
-        android:id="@+id/PTOF"
+        android:id="@+id/ptof"
         android:layout_width="130dp"
         android:layout_height="86dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:backgroundTint="#F2D700"
         android:text="PTOF"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/Libri"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
 
     <Button
-        android:id="@+id/Registro"
+        android:id="@+id/registro"
         android:layout_width="130dp"
         android:layout_height="86dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="150dp"
         android:text="Registro Elettronico"
         android:textSize="16dp"
+        android:backgroundTint="#FF1200"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orario"
+        app:layout_constraintVertical_bias="0.141" />
 
     <Button
-        android:id="@+id/Libri"
+        android:id="@+id/libri"
         android:layout_width="130dp"
         android:layout_height="86dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#00BCD4"
         android:text="Libri di Testo"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toEndOf="@+id/registro"
+        app:layout_constraintTop_toBottomOf="@+id/ptof"
+        app:layout_constraintVertical_bias="0.141" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
